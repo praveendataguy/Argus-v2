@@ -10,7 +10,8 @@ Argus rebuilt from scratch, one small pull request at a time: an AI back office 
 | --- | --- |
 | `server/` | Express API in TypeScript (port 8787) |
 | `web/` | React app built with Vite (port 5173) |
-| `.github/workflows/ci.yml` | CI: install, typecheck and build on every PR |
+| `server/test/` | Automatic tests for the server (Vitest + Supertest) |
+| `.github/workflows/ci.yml` | CI: install, typecheck, build and test on every PR |
 
 ## Run it locally
 
@@ -25,6 +26,7 @@ npm run dev:web      # terminal 2, then open http://localhost:5173
 ```bash
 npm run typecheck
 npm run build
+npm test
 ```
 
 ## How changes land
